@@ -1,8 +1,8 @@
 package com.pdp.authuser.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@Repository
+@RepositoryRestResource(path = "auth-users", collectionResourceRel = "authUsers")
 public interface AuthUserRepository extends JpaRepository<AuthUser, Long> {
 }
